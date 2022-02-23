@@ -17,7 +17,6 @@ def addTask(task, time, Date):
     date = f"{Date[0]}-{Date[1]}"
     cursor.execute("INSERT INTO Tasks (date, time, task) VALUES (%s, %s, %s)", (date, time, task))
     db.commit()
-    cursor.execute("SELECT * FROM Tasks")
 
 def getTaskofDay(DATE):
     """
